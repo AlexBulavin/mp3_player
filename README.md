@@ -3,7 +3,7 @@ Code for HW player like MP3-TF-16P and similar DFPlayers and ESP32-cam
 Create at 2023/09/18 so pay attention for actuality
 
 
-HERE IS SOME DETAILS
+## HERE IS SOME DETAILS
 Used hardware MP3-TF-16P mp3 player and the ESP32-cam
 
 Serial port library EspSoftwareSerial:
@@ -15,13 +15,16 @@ https://github.com/PowerBroker2/DFPlayerMini_Fast/tree/master
 Use 5V individual power (from power bank) for each MP3-TF-16P and ESP32-cam Do not try to get 3.3V power from ESP32-cam. 
 It does not have LDO and even GND for 5V is differ from GND for 3.3V
 
-Note that MP3 files should be named like 0001_FirstFile, 0002_SecondFile e.t.g where the 0001 ... 9999 is 
+## Note 
+that MP3 files should be named like 0001_FirstFile, 0002_SecondFile e.t.g where the 0001 ... 9999 is 
 iterated track numbers and _FirstFile, _SecondFile e.t.g are the custom names that can be used for display on LCD screen
 Wire ESP32-cam pins RX - 13,  TX - 14 and MP3-TF-16P pins TX, RX through 1kOhm resistors
 
 This sketch play 2000ms fragments of every track.
 If you need longer play, please change the logic accordigly.
 
+
+## Library API:
 - bool begin(Stream& stream, bool debug, unsigned long threshold=100);
 
 - void playNext();
