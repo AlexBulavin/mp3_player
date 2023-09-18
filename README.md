@@ -16,8 +16,16 @@ Use 5V individual power (from power bank) for each MP3-TF-16P and ESP32-cam Do n
 It does not have LDO and even GND for 5V is differ from GND for 3.3V
 
 ## Note 
-that MP3 files should be named like 0001_FirstFile, 0002_SecondFile e.t.g where the 0001 ... 9999 is 
-iterated track numbers and _FirstFile, _SecondFile e.t.g are the custom names that can be used for display on LCD screen
+that MP3 files should be named like 0001_FirstFile, 0002_SecondFile e.t.g where the 0001 ... 9999 is iterated track numbers and _FirstFile, _SecondFile e.t.g are the custom names that can be used for display on LCD screen.
+Example how to name files and calalogues:
+- music
+  - playlist1
+    - 001_song1.mp3
+    - 002_song2.mp3
+  - playlist2
+    - 001_track1.mp3
+    - 002_track2.mp3
+
 Wire ESP32-cam pins RX - 13,  TX - 14 and MP3-TF-16P pins TX, RX through 1kOhm resistors
 
 This sketch play 2000ms fragments of every track.
